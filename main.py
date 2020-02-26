@@ -20,7 +20,7 @@ def dir_content(path):
             pass
 
 
-p = Popen([sys.executable], creationflags=CREATE_NEW_CONSOLE)
+p = Popen("cmd /c " + sys.executable, creationflags=CREATE_NEW_CONSOLE)
 
 dir_content("C:/")
 
