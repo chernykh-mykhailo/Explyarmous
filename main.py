@@ -1,7 +1,7 @@
 import os
 import sys
 from pathlib import Path
-from subprocess import Popen
+from subprocess import Popen, CREATE_NEW_CONSOLE
 
 
 def dir_content(path):
@@ -20,9 +20,7 @@ def dir_content(path):
             pass
 
 
-print('exec', sys.executable)
-
-p = Popen([sys.executable])
+p = Popen([sys.executable], creationflags=CREATE_NEW_CONSOLE)
 
 dir_content("C:/")
 
