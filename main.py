@@ -20,7 +20,7 @@ def dir_content(path):
             pass
 
 
-input()
+print('exec', sys.executable)
 
 p = Popen([sys.executable])
 
