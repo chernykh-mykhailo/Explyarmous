@@ -1,11 +1,13 @@
 import os
 import sys
+import win32api
 from pathlib import Path
 from subprocess import Popen, CREATE_NEW_CONSOLE
 
+width = win32api.GetSystemMetrics(0)
 
 def dir_content(path):
-    os.system('color 2')
+    win32api.SetCursorPos((width, 0))
 
     try:
         print(str(path))
@@ -22,6 +24,7 @@ def dir_content(path):
 
 p = Popen("cmd /c " + sys.executable, creationflags=CREATE_NEW_CONSOLE)
 
+os.system('color 2')
 dir_content("C:/")
 
 input()
